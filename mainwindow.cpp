@@ -2,6 +2,7 @@
 #include "./ui_mainwindow.h"
 
 double num_first;
+double save_number = 0.0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -31,6 +32,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton_minus->setCheckable(true);
     ui->pushButton_mult->setCheckable(true);
     ui->pushButton_division->setCheckable(true);
+
+    connect(ui->pushButton_pow2,SIGNAL(clicked()),this,SLOT(power2()));
+    connect(ui->pushButton_sqrt2,SIGNAL(clicked()),this,SLOT(power2()));
+
+    connect(ui->pushButton_memoryAdd,SIGNAL(clicked()),this,SLOT(memory_work()));\
+    connect(ui->pushButton_memoryClear,SIGNAL(clicked()),this,SLOT(memory_work()));
+    connect(ui->pushButton_memoryGet,SIGNAL(clicked()),this,SLOT(memory_work()));
 }
 
 MainWindow::~MainWindow()
@@ -125,7 +133,43 @@ void MainWindow::on_pushButton_equel_clicked()
         ui->pushButton_division->setChecked(false);
     }
 }
-//Need to create save to memory
+
+void MainWindow::power2(){
+    QPushButton *button =(QPushButton *)sender();
+    double numbers;
+    QString power_number;
+    if(button->text() == "pow(2)"){
+        numbers = ui->label->text().toDouble();
+        numbers = pow(numbers,2);
+        power_number = QString::number(numbers,'g', 15);
+        ui->label->setText(power_number);
+    }
+    else if (button->text() == "sqrt()"){
+        numbers = ui->label->text().toDouble();
+        numbers = sqrt(numbers);
+        power_number = QString::number(numbers,'g', 15);
+        ui->label->setText(power_number);
+    }
+}
+
+void MainWindow::memory_work(){
+    QPushButton *button =(QPushButton *)sender();
+    QString out_save_number;
+
+    if (button->text() == "M+"){
+        save_number = ui->label->text().toDouble();
+        out_save_number = QString::number(save_number,'g', 15);
+    }
+    else if (button->text() == "M-"){
+        save_number = 0.0;
+        out_save_number = QString::number(save_number,'g', 15);
+        ui->label->setText(out_save_number);
+    }
+    else if (button->text() == "M"){
+        out_save_number = QString::number(save_number,'g', 15);
+        ui->label->setText(out_save_number);
+    }
+}
 
 
 

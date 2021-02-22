@@ -25,5 +25,7 @@ private slots:
     void on_pushButton_clear_clicked();
     void on_pushButton_equel_clicked();
     void math_operation();
+    void power2();
+    void memory_work();
 };
 #endif // MAINWINDOW_H

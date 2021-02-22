@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
+    <width>301</width>
     <height>361</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>221</width>
+      <width>291</width>
       <height>61</height>
      </rect>
     </property>
@@ -658,6 +658,166 @@ background-color:rgb(175, 175, 175);
     </property>
     <property name="text">
      <string>+/-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_memoryAdd">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>60</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255, 103, 103);
+color:white;
+border:1px solid gray;
+}
+
+QPushButton:pressed{
+background-color:rgb(255, 181, 166);
+}</string>
+    </property>
+    <property name="text">
+     <string>M+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_memoryClear">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>120</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255, 103, 103);
+color:white;
+border:1px solid gray;
+}
+
+QPushButton:pressed{
+background-color:rgb(255, 181, 166);
+}</string>
+    </property>
+    <property name="text">
+     <string>M-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_memoryGet">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>180</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255, 103, 103);
+color:white;
+border:1px solid gray;
+}
+
+QPushButton:pressed{
+background-color:rgb(255, 181, 166);
+}</string>
+    </property>
+    <property name="text">
+     <string>M</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_pow2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>240</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255,151,57);
+color:white;
+border:1px solid gray;
+}
+
+QPushButton:pressed{
+background-color:rgb(193, 95, 25);
+}</string>
+    </property>
+    <property name="text">
+     <string>pow(2)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_sqrt2">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>300</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color:rgb(255,151,57);
+color:white;
+border:1px solid gray;
+}
+
+QPushButton:pressed{
+background-color:rgb(193, 95, 25);
+}</string>
+    </property>
+    <property name="text">
+     <string>sqrt()</string>
     </property>
    </widget>
   </widget>
